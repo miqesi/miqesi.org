@@ -1,0 +1,14 @@
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Toph"
+license = "MPL-2.0"
+licenselink = "https://gitlab.com/jwflory/jwflory.gitlab.io/-/blob/main/LICENSE.txt"
+description = "Custom theme for Justin W. Flory's personal website."
+homepage = "https://jwf.io"
+tags = ["biography", "minimal"]
+features = []
+min_version = "0.88.1"
+
+[author]
+  name = "Justin W. Flory"
+  homepage = "https://jwf.io"

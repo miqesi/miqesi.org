@@ -1,0 +1,116 @@
+---
+###############################################################################
+#                                                                             #
+#                            WEBSITE CONFIGURATION                            #
+#                                                                             #
+###############################################################################
+
+
+# --- base website settings ---
+
+title: Miqesi
+baseURL: https://miqesi.org/
+theme: toph
+languageCode: en-us
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: false
+#googleAnalytics: TBD
+
+
+# --- security settings ---
+
+security:
+  exec:
+    allow: ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+
+
+# --- markup settings ---
+
+markup:
+  asciidocExt:
+    preserveTOC: true
+
+
+# --- privacy settings ---
+
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+  twitter:
+    enableDNT: true
+  vimeo:
+    enableDNT: true
+  youtube:
+    privacyEnhanced: true
+
+
+# --- navigation menu ---
+
+menu:
+  nav:
+    - identifier: home
+      name: home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: blog
+      url: https://blog.miqesi.org/
+      weight: 20
+  social:
+    - identifier: gitlab
+      name: GitLab
+      url: https://gitlab.com/jwflory
+      weight: 10
+    - identifier: mastodon
+      name: Mastodon
+      url: https://floss.social/@jwf
+      weight: 20
+
+
+# --- custom settings ---
+
+params:
+  biography:
+    name: Miqesi
+    blog: https://blog.miqesi.org
+    first_online: 2024
+    knows_about: [
+      "a11y",
+      "accessibility",
+      "diversity",
+      "equity",
+      "Fedora Project",
+      "Free Software",
+      "inclusion",
+      "Linux",
+      "open source",
+      "Red Hat",
+      "Red Hat Enterprise Linux (RHEL)",
+      "RPM package management",
+      "user experience"
+    ]
+  colors:
+    primary: saffron
+    secondary: linen
+    accent: darkslateblue
+  description: Home of Project Miqesi.
+  fonts:
+    default: Open Sans
+    default_weight: ":wght@500"
+    title: Bungee Shade
+    header: Roboto Slab
+    header_weight: ":wght@500"
+  images:
+    - /img/logo.jpg
+  git_repo: https://gitlab.com/jwflory/miqesi.org
+  # Are you looking for new opportunities? Set hire_me to "true" if you want your LinkedIn to show on the nav bar and
+  # for boilerplate text on how to get in touch.
+  hire_me: false
+  social:
+    github_username: jwflory
+    gitlab_username: jwflory
+    lastfm_username: jflory7
+    linkedin_url: justinwflory
+    x_username: jwf_foss

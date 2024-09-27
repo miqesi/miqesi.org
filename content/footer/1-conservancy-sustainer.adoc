@@ -1,0 +1,8 @@
+---
+categories: ["footer"]
+hide_sitemap: true
+
+---
+
+[link=https://sfconservancy.org/sustainer/]
+image::https://sfconservancy.org/img/supporter-badge.png[Become a Conservancy Sustainer!]
