@@ -18,11 +18,20 @@ enableRobotsTXT: false
 #googleAnalytics: TBD
 
 
+# --- taxonomy and pagination settings ---
+
+taxonomies:
+  tag: tags
+  category: categories
+pagination:
+  pagerSize: 10
+
+
 # --- security settings ---
 
 security:
   exec:
-    allow: ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+    allow: ['^dart-sass-embedded$', '^git$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
 
 
 # --- markup settings ---
@@ -30,6 +39,8 @@ security:
 markup:
   asciidocExt:
     preserveTOC: true
+  highlight:
+    style: github
 
 
 # --- privacy settings ---
@@ -38,9 +49,7 @@ privacy:
   googleAnalytics:
     anonymizeIP: true
     respectDoNotTrack: true
-  twitter:
-    enableDNT: true
-  vimeo:
+  x:
     enableDNT: true
   youtube:
     privacyEnhanced: true
@@ -56,17 +65,18 @@ menu:
       weight: 10
     - identifier: blog
       name: blog
-      url: https://blog.miqesi.org/
+      url: /blog/
       weight: 20
-  social:
-    - identifier: gitlab
-      name: GitLab
-      url: https://gitlab.com/jwflory
-      weight: 10
-    - identifier: mastodon
-      name: Mastodon
-      url: https://floss.social/@jwf
-      weight: 20
+    - identifier: categories
+      name: categories
+      url: /categories/
+      parent: blog
+      weight: 30
+    - identifier: tags
+      name: tags
+      url: /tags/
+      parent: blog
+      weight: 40
 
 
 # --- custom settings ---
@@ -74,7 +84,9 @@ menu:
 params:
   biography:
     name: Miqesi
-    blog: https://blog.miqesi.org
+    tagline: ""
+    email: ""
+    blog: ""
     first_online: 2024
     knows_about: [
       "a11y",
@@ -104,13 +116,30 @@ params:
     header_weight: ":wght@500"
   images:
     - /img/logo.jpg
-  git_repo: https://gitlab.com/jwflory/miqesi.org
-  # Are you looking for new opportunities? Set hire_me to "true" if you want your LinkedIn to show on the nav bar and
-  # for boilerplate text on how to get in touch.
+  favicon: /favicon.ico
+  git_repo: https://github.com/miqesi/miqesi.org
+  taxonomy_exclude: ["footer", "projects"]
   hire_me: false
   social:
-    github_username: jwflory
-    gitlab_username: jwflory
-    lastfm_username: jflory7
-    linkedin_url: justinwflory
-    x_username: jwf_foss
+    # github: ""
+    # gitlab: ""
+    # linkedin: ""
+    # mastodon: ""
+  legal:
+    license:
+      name: ""
+      url: ""
+      title: ""
+  date_format: "2006 January 02"
+  layouts:
+    categories:
+      recent_posts: 3
+      excerpt_length: 250
+
+
+# --- internationalization settings ---
+
+defaultContentLang: en
+languages:
+  en:
+    languageName: English
