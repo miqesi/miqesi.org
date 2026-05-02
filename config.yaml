@@ -104,18 +104,19 @@ params:
       "user experience"
     ]
   colors:
-    primary: saffron
-    secondary: linen
-    accent: darkslateblue
+    primary: "#AD1457"
+    secondary: "#F8F6F0"
+    accent: "#33691E"
   description: Home of Project Miqesi.
   fonts:
-    default: Open Sans
-    default_weight: ":wght@500"
-    title: Bungee Shade
-    header: Roboto Slab
-    header_weight: ":wght@500"
+    default: Atkinson Hyperlegible Next
+    default_weight: ":wght@400;700"
+    title: Inter
+    title_weight: ":wght@900"
+    header: Inter
+    header_weight: ":wght@700"
   images:
-    - /img/logo.jpg
+    - /img/logo.png
   favicon: /favicon.ico
   git_repo: https://github.com/miqesi/miqesi.org
   taxonomy_exclude: ["footer", "projects"]
