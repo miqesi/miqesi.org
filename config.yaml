@@ -11,7 +11,7 @@
 title: Miqesi
 baseURL: https://miqesi.org/
 theme: toph
-languageCode: en-us
+locale: en-us
 enableEmoji: true
 enableGitInfo: true
 enableRobotsTXT: false
@@ -143,4 +143,4 @@ params:
 defaultContentLang: en
 languages:
   en:
-    languageName: English
+    label: English
