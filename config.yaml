@@ -63,20 +63,24 @@ menu:
       name: home
       url: /
       weight: 10
+    - identifier: team
+      name: team
+      url: /team/
+      weight: 20
     - identifier: blog
       name: blog
       url: /blog/
-      weight: 20
+      weight: 30
     - identifier: categories
       name: categories
       url: /categories/
       parent: blog
-      weight: 30
+      weight: 40
     - identifier: tags
       name: tags
       url: /tags/
       parent: blog
-      weight: 40
+      weight: 50
 
 
 # --- custom settings ---
@@ -119,7 +123,7 @@ params:
     - /img/logo.png
   favicon: /favicon.ico
   git_repo: https://github.com/miqesi/miqesi.org
-  taxonomy_exclude: ["footer", "projects"]
+  taxonomy_exclude: ["footer", "projects", "team"]
   hire_me: false
   social:
     # github: ""
