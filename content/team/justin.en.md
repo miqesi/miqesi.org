@@ -4,7 +4,11 @@ slug: justin
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]
+link: "https://jwheel.org"
+photo: "https://jwheel.org/img/logo.jpg"
 role: Project Initiator & Vision Facilitator
+title_text: Photo of Justin Wheeler
+years: "2024 - present"
 ---
 
 Justin is the initiator of Project Miqësi, having sent the original kickoff email that sparked the project on August 20, 2024.
