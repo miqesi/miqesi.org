@@ -1,3 +1,7 @@
+---
+layout: biography
+---
+
 == Coming soon…
 
 Check back soon for more about Project Miqësi.
