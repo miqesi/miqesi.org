@@ -36,11 +36,15 @@ Deep Bloom maximizes vibrancy while maintaining comfortable contrast margins abo
 
 ## Typography
 
-| Slot | Font | Weight | Google Fonts weight param |
-|------|------|--------|--------------------------|
-| Title (h1) | Inter | 900 (Black) | `:wght@900` |
-| Header (h2–h6) | Inter | 700 (Bold) | `:wght@700` |
-| Body (default) | Atkinson Hyperlegible Next | 400 (Regular), 700 (Bold) | `:wght@400;700` |
+| Slot | Font | Weight | `params.fonts.*_weight` |
+|------|------|--------|-------------------------|
+| Title (h1) | Inter | 900 (Black) | `"900"` |
+| Header (h2–h6) | Inter | 700 (Bold) | `"700"` |
+| Body (default) | Atkinson Hyperlegible Next | 400 (Regular) | `"400"` |
+
+**Font-weight binding:** Toph's `partials/font-weight.html` treats a value beginning with `:` as a legacy Google Fonts query and uses the **last** weight in the tuple for CSS.
+Configuring `:wght@400;700` therefore rendered body text at 700 instead of 400.
+Use numeric strings instead; the theme builds the `:wght@` request from them, and browsers synthesize bold body text.
 
 **Font rationale:**
 
@@ -65,38 +69,64 @@ This directly follows Bee Padalkar's accessibility recommendation.
 All changes are confined to `config.yaml` under the `params` section.
 No theme CSS files need modification.
 
-The theme's `head.html` partial reads these values, sets them as CSS custom properties (`--primary`, `--secondary`, `--accent-color`, `--default-font`, `--title-font`, `--header-font`), and loads the corresponding Google Fonts stylesheets.
+The theme's `head.html` partial reads these values and compiles them into the stylesheet.
+Light-mode brand and neutral values are baked in at build time through `css.Build` vars (`@import 'hugo:vars'`), and dark-mode values are emitted as an inline `<style>` block.
+Fonts are fetched at build time and republished from the site's own origin.
 
 **Config changes:**
 
 ```yaml
 params:
+  color_mode: auto
   colors:
-    primary: "#AD1457"
-    secondary: "#F8F6F0"
-    accent: "#33691E"
+    light:
+      primary: "#AD1457"
+      secondary: "#F8F6F0"
+      accent: "#33691E"
+      background: "#F8F6F0"
+    dark:
+      primary: "#AD1457"
+      secondary: "#F8F6F0"
+      accent: "#33691E"
+      background: "#121212"
   fonts:
     default: Atkinson Hyperlegible Next
-    default_weight: ":wght@400;700"
+    default_weight: "400"
     title: Inter
-    title_weight: ":wght@900"
+    title_weight: "900"
     header: Inter
-    header_weight: ":wght@700"
+    header_weight: "700"
+  hero:
+    shape: square
 ```
 
-**What changes from the current config:**
+`colors.background` is a required role in the nested schema.
+`colors.dark.*` may fall back to its light counterpart, but both trees are declared here so dark mode is explicit.
 
-| Field | Before (placeholder) | After |
-|-------|---------------------|-------|
-| `colors.primary` | `saffron` | `"#AD1457"` |
-| `colors.secondary` | `linen` | `"#F8F6F0"` |
-| `colors.accent` | `darkslateblue` | `"#33691E"` |
+**What changes from the original implementation:**
+
+| Field | Before | After |
+|-------|--------|-------|
+| `colors.primary` | `saffron` | `colors.light.primary: "#AD1457"` |
+| `colors.secondary` | `linen` | `colors.light.secondary: "#F8F6F0"` |
+| `colors.accent` | `darkslateblue` | `colors.light.accent: "#33691E"` |
+| `colors.background` | *(not a role)* | `colors.light.background: "#F8F6F0"`, `colors.dark.background: "#121212"` |
 | `fonts.default` | `Open Sans` | `Atkinson Hyperlegible Next` |
-| `fonts.default_weight` | `:wght@500` | `:wght@400;700` |
+| `fonts.default_weight` | `:wght@500` | `"400"` |
 | `fonts.title` | `Bungee Shade` | `Inter` |
-| `fonts.title_weight` | *(not set)* | `:wght@900` |
+| `fonts.title_weight` | *(not set)* | `"900"` |
 | `fonts.header` | `Roboto Slab` | `Inter` |
-| `fonts.header_weight` | `:wght@500` | `:wght@700` |
+| `fonts.header_weight` | `:wght@500` | `"700"` |
+| `hero.shape` | *(not set — circular crop)* | `square` |
+
+## Assets
+
+The brand mark lives at `assets/pages/logo.png` and is served at `/pages/logo.png`.
+`module.mounts` maps `assets/pages` to `static/pages`, which keeps the file available to Hugo's image pipeline while giving it a stable public URL.
+
+The hero resizes the source into 280w and 500w WebP derivatives at build time.
+The source PNG is not re-encoded and remains the `og:image` and JSON-LD fallback.
+`params.hero.shape: square` keeps the circular CSS mask from clipping the square mark.
 
 ## Verification
 

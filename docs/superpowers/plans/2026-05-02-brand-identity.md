@@ -1,5 +1,8 @@
 # Brand Identity Implementation Plan
 
+> **Historical document:** This plan records the original May 2026 brand rollout.
+> The current configuration schema, including nested colors, numeric font weights, and asset handling, is documented in [the Toph v1.2 migration spec](../specs/2026-11-08-toph-v1.2-migration.md).
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Replace placeholder colors and fonts in config.yaml with the approved Deep Bloom palette and Inter/Atkinson Hyperlegible type system.
