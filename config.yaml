@@ -27,6 +27,19 @@ pagination:
   pagerSize: 10
 
 
+# --- module mounts ---
+
+module:
+  mounts:
+    # Keep unmanaged static files (favicon, robots.txt) where they are.
+    - source: static
+      target: static
+    # Serve page assets at /pages/ while keeping them available to Hugo's
+    # image processing pipeline (responsive WebP, fingerprinting).
+    - source: assets/pages
+      target: static/pages
+
+
 # --- security settings ---
 
 security:
@@ -129,7 +142,7 @@ params:
   hero:
     shape: square
   images:
-    - /img/logo.png
+    - /pages/logo.png
   favicon: /favicon.ico
   git_repo: https://github.com/miqesi/miqesi.org
   taxonomy_exclude: ["footer", "projects", "team"]
