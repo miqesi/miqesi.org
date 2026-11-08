@@ -61,24 +61,24 @@ menu:
   nav:
     - identifier: home
       name: home
-      url: /
+      pageRef: /
       weight: 10
     - identifier: team
       name: team
-      url: /team/
+      pageRef: /team
       weight: 20
     - identifier: blog
       name: blog
-      url: /blog/
+      pageRef: /blog
       weight: 30
     - identifier: categories
       name: categories
-      url: /categories/
+      pageRef: /categories
       parent: blog
       weight: 40
     - identifier: tags
       name: tags
-      url: /tags/
+      pageRef: /tags
       parent: blog
       weight: 50
 
@@ -86,11 +86,11 @@ menu:
 # --- custom settings ---
 
 params:
+  color_mode: auto
   biography:
     name: Miqesi
     tagline: ""
-    email: ""
-    blog: ""
+    email: "example@example.com"
     first_online: 2024
     knows_about: [
       "a11y",
@@ -108,17 +108,26 @@ params:
       "user experience"
     ]
   colors:
-    primary: "#AD1457"
-    secondary: "#F8F6F0"
-    accent: "#33691E"
+    light:
+      primary: "#AD1457"
+      secondary: "#F8F6F0"
+      accent: "#33691E"
+      background: "#F8F6F0"
+    dark:
+      primary: "#AD1457"
+      secondary: "#F8F6F0"
+      accent: "#33691E"
+      background: "#121212"
   description: Home of Project Miqesi.
   fonts:
     default: Atkinson Hyperlegible Next
-    default_weight: ":wght@400;700"
+    default_weight: "400"
     title: Inter
-    title_weight: ":wght@900"
+    title_weight: "900"
     header: Inter
-    header_weight: ":wght@700"
+    header_weight: "700"
+  hero:
+    shape: square
   images:
     - /img/logo.png
   favicon: /favicon.ico
@@ -126,16 +135,15 @@ params:
   taxonomy_exclude: ["footer", "projects", "team"]
   hire_me: false
   social:
-    # github: ""
-    # gitlab: ""
-    # linkedin: ""
-    # mastodon: ""
+    github: miqesi
   legal:
     license:
-      name: ""
-      url: ""
-      title: ""
+      name: "MPL-2.0"
+      url: "https://www.mozilla.org/en-US/MPL/2.0/"
+      title: "Mozilla Public License 2.0"
   date_format: "2006 January 02"
+  team:
+    page_title: "Team"
   layouts:
     categories:
       recent_posts: 3
@@ -147,4 +155,5 @@ params:
 defaultContentLang: en
 languages:
   en:
+    weight: 1
     label: English
