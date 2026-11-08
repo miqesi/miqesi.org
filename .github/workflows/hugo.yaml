@@ -38,11 +38,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.161.1"
-      DART_SASS_VERSION: "1.98.0"
+      HUGO_VERSION: "0.169.0"
+      DART_SASS_VERSION: "1.108.1"
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
           fetch-depth: 0
@@ -54,7 +54,7 @@ jobs:
 
       - name: Cache Hugo CLI
         id: cache-hugo
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: /usr/local/bin/hugo
           key: hugo-${{ env.HUGO_VERSION }}-linux-amd64
@@ -69,7 +69,7 @@ jobs:
 
       - name: Cache Dart Sass
         id: cache-sass
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: /usr/local/bin/sass
           key: dart-sass-${{ env.DART_SASS_VERSION }}-linux-x64
@@ -93,7 +93,7 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Cache Hugo resources
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: hugo-cache-${{ github.run_id }}
