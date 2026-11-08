@@ -1,6 +1,7 @@
 ---
 title: "Bhagyashree \"Bee\" Padalkar"
 slug: bee
+weight: 10
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]

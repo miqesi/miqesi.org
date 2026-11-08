@@ -1,6 +1,7 @@
 ---
 title: "Wilfried Hounyo"
 slug: wilfried
+weight: 70
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]

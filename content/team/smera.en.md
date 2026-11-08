@@ -1,6 +1,7 @@
 ---
 title: Smera Goel
 slug: smera
+weight: 50
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]

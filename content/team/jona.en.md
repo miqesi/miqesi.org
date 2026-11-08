@@ -1,6 +1,7 @@
 ---
 title: Jona Azizaj
 slug: jona
+weight: 20
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]

@@ -1,11 +1,12 @@
 ---
 title: Justin Wheeler
 slug: justin
+weight: 30
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]
 link: "https://jwheel.org"
-photo: "https://jwheel.org/img/logo.jpg"
+photo: "https://jwheel.org/pages/logo.jpg"
 role: Project Initiator & Vision Facilitator
 title_text: Photo of Justin Wheeler
 years: "2024 - present"

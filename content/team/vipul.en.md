@@ -1,6 +1,7 @@
 ---
 title: Vipul Siddharth
 slug: vipul
+weight: 60
 date: 2026-05-20
 hide_sitemap: true
 categories: ["team"]
