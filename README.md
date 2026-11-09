@@ -69,6 +69,11 @@ The site logo is `assets/pages/logo.png`; the hero generates 280w and 500w WebP 
 The original PNG is still the `og:image` and JSON-LD fallback.
 
 
+## Contributing
+
+See `CONTRIBUTING.md` for how to add a blog post.
+
+
 ## Legal
 
 Licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/) or any later version published by the Mozilla Foundation.
