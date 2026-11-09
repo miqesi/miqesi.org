@@ -77,7 +77,7 @@ toc: false
 | `date` | yes | Publication date with a timezone offset. The archetype inserts the current time, so adjust it to the planned date. Drives archive grouping and sort order. |
 | `draft` | yes | When `true`, the post is excluded from builds. Add `-D` to `hugo server` to preview it. |
 | `description` | strongly recommended | Plain-text meta description, social card summary, archive excerpt, and Article schema. Keep it under about 160 characters. |
-| `author` | optional | Byline for the post and Article schema. Falls back to the site name, `Miqesi`. |
+| `author` | optional | Byline for the post and Article schema. Falls back to the site name, `Miqësi`. |
 | `categories` | optional | Broad groupings such as `community` or `events`. Avoid `footer`, `projects`, and `team`. |
 | `tags` | optional | Finer topics such as `accessibility` or `conferences`. Use lowercase and hyphens. |
 | `images` | optional | Cover image, Open Graph and Twitter card, Article schema image, and RSS enclosure. Only the first entry is used. |

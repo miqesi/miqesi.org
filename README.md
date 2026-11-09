@@ -1,7 +1,7 @@
 [miqesi.org](https://miqesi.org)
 ================================
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 Homepage of Project Miqësi
 
@@ -76,4 +76,7 @@ See `CONTRIBUTING.md` for how to add a blog post.
 
 ## Legal
 
-Licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/) or any later version published by the Mozilla Foundation.
+All content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license (CC BY-NC-SA 4.0).
+The full text is in `LICENSE.txt`.
+
+The Toph theme is licensed separately under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/), and `themes/toph/LICENSE.txt` holds that text.

@@ -8,7 +8,7 @@
 
 # --- base website settings ---
 
-title: Miqesi
+title: Miqësi
 baseURL: https://miqesi.org/
 theme: toph
 locale: en-us
@@ -101,7 +101,7 @@ menu:
 params:
   color_mode: auto
   biography:
-    name: Miqesi
+    name: Miqësi
     tagline: ""
     email: "example@example.com"
     first_online: 2024
@@ -131,7 +131,7 @@ params:
       secondary: "#F8F6F0"
       accent: "#33691E"
       background: "#121212"
-  description: Home of Project Miqesi.
+  description: Home of Project Miqësi.
   fonts:
     default: Atkinson Hyperlegible Next
     default_weight: "400"
@@ -151,9 +151,9 @@ params:
     github: miqesi
   legal:
     license:
-      name: "MPL-2.0"
-      url: "https://www.mozilla.org/en-US/MPL/2.0/"
-      title: "Mozilla Public License 2.0"
+      name: "CC BY-NC-SA 4.0"
+      url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      title: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
   date_format: "2006 January 02"
   team:
     page_title: "Team"

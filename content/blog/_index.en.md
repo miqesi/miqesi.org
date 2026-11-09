@@ -1,9 +1,9 @@
 ---
 title: Blog
-description: "News, notes, and stories from Project Miqesi."
+description: "News, notes, and stories from Project Miqësi."
 ---
 
-Welcome to the Project Miqesi blog.
+Welcome to the Project Miqësi blog.
 This is where we share what we learn as we build a more accessible, equitable, and community-driven open source ecosystem.
 
 Expect posts about open source practice, accessibility, and the technology we use and recommend.

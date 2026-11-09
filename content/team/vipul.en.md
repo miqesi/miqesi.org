@@ -9,4 +9,4 @@ role: Core Organizer & Business Co-Facilitator
 ---
 
 Vipul is a member of the Project Miqësi core organizing team.
-During the foundational vision workshop, he helped co-facilitate the 20-minute "Business of Miqesi" segment to help determine the project's strategic direction.
+During the foundational vision workshop, he helped co-facilitate the 20-minute "Business of Miqësi" segment to help determine the project's strategic direction.
