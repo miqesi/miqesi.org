@@ -74,6 +74,12 @@ The original PNG is still the `og:image` and JSON-LD fallback.
 See `CONTRIBUTING.md` for how to add a blog post.
 
 
+## For AI agents
+
+`AGENTS.md` documents how the repository is put together and the conventions an AI coding agent must follow, including the content layout, configuration, deployment, and submodule workflow.
+Humans can read it too: it is the shortest map of how the site works and why it is arranged this way.
+
+
 ## Legal
 
 All content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license (CC BY-NC-SA 4.0).
